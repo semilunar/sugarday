@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <title>Проект к сахару дню</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+
+    function timer() {
+      var nowDate = new Date();
+      var achiveDate = new Date(2018,99999,999999,999999,99999,47);
+      var result = (achiveDate - nowDate)+1000;
+      if (result < 0) {
+          var time = document.getElementById('timer');
+          time.innerHTML = ' - : - - : - - : - - ';
+          return undefined;
+      }
+      var seconds = Math.floor((result/1000)%60);
+      var minutes = Math.floor((result/1000/60)%60);
+      var hours = Math.floor((result/1000/60/60)%24);
+      var days = Math.floor(result/1000/60/60/24);
+      if (seconds < 10) seconds = '0' + seconds;
+      if (minutes < 10) minutes = '0' + minutes;
+      if (hours < 10) hours = '0' + hours;
+      var time = document.getElementById('timer');
+      time.innerHTML = days + ':' + hours + ':' + minutes + ':' + seconds;
+      setTimeout(timer, 1000);
+    }
+    window.onload = function() {
+      timer();
+    }
+  </script>
+
+
+  <main>
+
+    <section class="section section_intro">
+      <h1 class="section__header">ксюша. я люблю тебя</h1>
+      <p class="section__paragraph">но мы сделаем ничего</p>
+      <p class="section__paragraph">блаженны сидящие на последней парте, но мы ведь другие, но ничего</p>
+      <p class="section__paragraph">мы, во-первых, человечны, это немало</p>
+      <p class="section__paragraph">у нас есть рубашки для презентации в конце года, это два</p>
+      <p class="section__paragraph">пауза.</p>
+      <a class="animate-color" href="https://ru.wikisource.org/wiki/%D0%9D%D0%B8%D1%87%D1%82%D0%BE%D0%B6%D0%BD%D1%8B%D0%B5_%D0%B8_%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D1%8B%D0%B5_(%D0%A2%D1%8D%D1%84%D1%84%D0%B8)" target="blank">ничтож и светл</a>
+      <p class="section__paragraph">до дедлайна осталось</p>
+      <div class="section__div_timer" id="timer"></div>
+    </section>
+
+
+    <section class="section section_middle">
+      <img class="section__image"src="img/mask.jpg" alt="носок на потолке">
+      <button class="section__button_project">проект горит</button>
+    </section>
+
+    <section class="section section_dumb">
+      <button class="section__button_dumb">
+        <a class="section__link_dumb" href="https://thumb7.shutterstock.com/display_pic_with_logo/172762/536949154/stock-photo-increase-the-climb-to-success-536949154.jpg" target="_blank">.</a>
+        <a class="section__link_dumb" href="https://thumb1.shutterstock.com/display_pic_with_logo/67766/754606399/stock-photo-businessman-climbing-the-career-ladder-of-success-754606399.jpg" target="_blank">.</a>
+        <a class="section__link_dumb" href="https://image.shutterstock.com/image-photo/winning-success-life-goals-concept-260nw-639818752.jpg" target="_blank">.</a>
+        <a class="section__link_dumb" href="https://image.shutterstock.com/z/stock-photo-business-woman-stepping-up-on-stairs-to-gain-her-success-with-white-wall-background-asian-230351605.jpg
+" target="_blank">.</a>
+        <a class="section__link_dumb" href="https://thumb7.shutterstock.com/display_pic_with_logo/919514/565330174/stock-photo-happy-man-on-mountain-summit-enjoying-aerial-view-hands-raised-over-clouds-travel-lifestyle-success-565330174.jpg" target="_blank">.</a>
+        <a class="section__link_dumb"href="https://ak3.picdn.net/shutterstock/videos/5662223/thumb/2.jpg" target="_blank">и</a>
+      </button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__paragraph">здесь о нас можно вытереть ноги. ха-ха. цифровые пятки бегут по дорожке, смешно тебе, признавайся, если тебе не смешно, я вообще ухожу отсюда.</p>
+  </footer>
+
+</body>
+</html>
