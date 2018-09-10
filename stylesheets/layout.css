@@ -24,15 +24,12 @@ a {
     color: white;
 }
 
-.section {
-}
-
 .section__image {
   width: 123px;
+  margin: 1px 0 0;
 }
 
 .section__image:hover {
-  filter: invert(1);
   cursor: pointer;
 }
 
@@ -61,7 +58,6 @@ a {
 .section__button_dumb {
   width: 800px;
   height: 800px;
-  /* background-color: #F4D76E; */
   background-color: #000;
   transition: 1s all ease;
   border-radius: 50%;
@@ -79,7 +75,20 @@ a {
   font-size: 11px;
 }
 
-/* animation */
+.footer__paragraph_circle {
+  position: absolute;
+  right: 11px;
+  bottom: 11px;
+  color: #A6A6A6;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.footer__paragraph_circle:hover {
+  color: #000;
+}
+
+/* color animation */
 
 .animate-color {
   animation: random-bg .5s linear infinite;
@@ -131,3 +140,20 @@ a {
     transform: scale(.1);
   }
 }
+
+
+/* mask animation */
+
+.section__image:hover {
+  animation: mask-run .1s linear infinite;
+}
+
+@keyframes mask-run {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
