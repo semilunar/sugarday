@@ -43,6 +43,11 @@ a {
   font-size: 13px;
 }
 
+.section__paragraph_new {
+  margin: 36px 123px;
+  text-decoration: underline;
+}
+
 .section__link_dumb {
   color: #fff;
   text-decoration: none;
@@ -76,7 +81,7 @@ a {
 }
 
 .footer__paragraph_circle {
-  position: absolute;
+  position: fixed;
   right: 11px;
   bottom: 11px;
   color: #A6A6A6;
@@ -119,7 +124,7 @@ a {
   margin: 10px auto;
 }
 
-.section__button_project:hover {
+.section__button_project {
   animation: grow 1300ms ease infinite;
 }
 
