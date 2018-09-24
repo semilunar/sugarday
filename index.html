@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="stylesheets/style.css">
   <title>Проект к сахару дню</title>
 </head>
-<body>
+<body id="everything">
 
   <script type="text/javascript">
 
@@ -78,6 +78,8 @@
 
   </main>
 
+  <iframe src="https://yandex.ru/map-widget/v1/-/CBBRfZGmTD" margin="auto "width="1165" height="558" frameborder="1" allowfullscreen="true"></iframe>
+
   <footer class="footer">
     <p class="footer__paragraph">здесь о нас можно вытереть ноги. ха-ха. цифровые пятки бегут по дорожке, смешно тебе, признавайся, если тебе не смешно, я вообще ухожу отсюда.</p>
     <p class="footer__paragraph footer__paragraph_circle">нарисуй мне кружок</p>
@@ -89,6 +91,11 @@
     var str = 'Где сердце ваше, там будет и сокровище ваше';
 
     console.log ( '%c%s', 'font: .6rem/1 Helvetica; color: #8AA6DF', str );
+
+
+    document.getElementById('everything').onclick = function() {
+      document.getElementById('everything').style.display = 'none';
+    }
 
   </script>
 
